@@ -6,16 +6,20 @@
 
 @implementation OSBugPlugin
 
-#pragma mark - Life Cycle
-
 -(void)pluginInitialize {
     //TODO implement
 }
 
-# pragma mark - Interface
-
 - (void)throwError:(CDVInvokedUrlCommand *)command{
-    //TODO implement
+    //try 1
+    NSArray *myList = @[];
+    [myList objectAtIndex:3];
+    
+    //try 2
+    //int *x = NULL; *x = 42;
+    
+    //try 3
+    //@throw NSInternalInconsistencyException;
 }
 
 @end
