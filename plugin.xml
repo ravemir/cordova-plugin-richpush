@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-bug" version="0.0.1">
+    
+    <name>Bug</name>
+    <description>Cordova Bug Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,outsystems,bug,plugin</keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <!-- js -->
+    <js-module name="OSBug" src="www/OSBug.js">
+        <clobbers target="OSBug" />
+    </js-module>
+    
+    <!-- ios -->
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="OSBugPlugin">
+                <param name="ios-package" value="OSBugPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/OSBugPlugin.h"/>
+        <source-file src="src/ios/OSBugPlugin.m" />
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file parent="/*" target="config.xml">
+            <feature name="OSBug">
+                <param name="android-package" value="org.apache.cordova.bug.OSBug"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/OSBugPlugin.java" target-dir="src/android/org/apache/cordova/bug" />
+    </platform>
+</plugin>

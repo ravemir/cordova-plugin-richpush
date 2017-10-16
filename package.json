@@ -1,0 +1,22 @@
+{
+  "name": "cordova-plugin-bug",
+  "version": "0.0.1",
+  "description": "Cordova Bug Plugin",
+  "cordova": {
+    "id": "cordova-plugin-bug",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bgracio/cordova-plugin-bug"
+  },
+  "keywords": [
+    "cordova","outsystems","bug","plugin"
+  ],
+  "author": "bgracio",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/bgracio/cordova-plugin-bug#readme"
+}
