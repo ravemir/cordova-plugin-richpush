@@ -1,12 +1,9 @@
-package org.apache.cordova.bug.OSBug;
+package org.apache.cordova.bug;
 
-import org.apache.cordova.BuildHelper;
+import android.util.Log;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaResourceApi;
-import org.apache.cordova.LOG;
-import org.apache.cordova.PermissionHelper;
-import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -20,6 +17,9 @@ public class OSBugPlugin extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         //TODO implement
+        int randomNumber = 10 / 0;
+        Log.d("BUG", "Number: " + randomNumber);
+        return true;
     }
 
 }

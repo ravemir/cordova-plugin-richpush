@@ -31,11 +31,12 @@
     <!-- android -->
     <platform name="android">
         <config-file parent="/*" target="config.xml">
-            <feature name="OSBug">
-                <param name="android-package" value="org.apache.cordova.bug.OSBug"/>
+            <feature name="OSBugPlugin">
+                <param name="android-package" value="org.apache.cordova.bug.OSBugPlugin"/>
+                <param name="onload" value="true" />
             </feature>
         </config-file>
 
-        <source-file src="src/android/OSBugPlugin.java" target-dir="src/android/org/apache/cordova/bug" />
+        <source-file src="src/android/OSBugPlugin.java" target-dir="src/org/apache/cordova/bug" />
     </platform>
 </plugin>
