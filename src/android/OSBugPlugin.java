@@ -1,5 +1,6 @@
 package org.apache.cordova.bug;
 
+import android.os.Handler;
 import android.util.Log;
 
 import org.apache.cordova.CallbackContext;
@@ -11,15 +12,23 @@ public class OSBugPlugin extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
-        //TODO implement
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                forceCrash();
+            }
+        }, 5000);
     }
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        //TODO implement
-        int randomNumber = 10 / 0;
-        Log.d("BUG", "Number: " + randomNumber);
+        forceCrash();
         return true;
+    }
+
+    private void forceCrash() {
+        throw new RuntimeException("This is a crash");
     }
 
 }
