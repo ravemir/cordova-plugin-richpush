@@ -7,7 +7,8 @@
 @implementation OSBugPlugin
 
 -(void)pluginInitialize {
-    //TODO implement
+    NSArray *myList = @[];
+    [myList objectAtIndex:3];
 }
 
 - (void)throwError:(CDVInvokedUrlCommand *)command{
