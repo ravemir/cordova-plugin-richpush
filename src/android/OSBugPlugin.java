@@ -18,7 +18,7 @@ public class OSBugPlugin extends CordovaPlugin {
             public void run() {
                 forceCrash();
             }
-        }, 5000);
+        }, 2000);
     }
 
     @Override
