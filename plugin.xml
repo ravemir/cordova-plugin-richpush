@@ -37,6 +37,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/OSRichPush.java" target-dir="src/org/apache/cordova/bug" />
+        <source-file src="src/android/OSRichPush.java" target-dir="src/org/apache/cordova/richpush" />
     </platform>
 </plugin>
