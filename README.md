@@ -1,1 +1,1 @@
-# cordova-plugin-bug
+# cordova-plugin-richpush
