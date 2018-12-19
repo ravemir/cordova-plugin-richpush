@@ -11,7 +11,7 @@
     <issue></issue>
 
     <!-- js -->
-    <js-module name="OSRichPush" src="www/OSBug.js">
+    <js-module name="OSRichPush" src="www/OSRichPush.js">
         <clobbers target="OSRichPush" />
     </js-module>
     
@@ -31,7 +31,7 @@
     <!-- android -->
     <platform name="android">
         <config-file parent="/*" target="config.xml">
-            <feature name="OSBugPlugin">
+            <feature name="OSRichPush">
                 <param name="android-package" value="org.apache.cordova.richpush.OSRichPush"/>
                 <param name="onload" value="true" />
             </feature>
