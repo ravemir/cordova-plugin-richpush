@@ -1,4 +1,4 @@
-package org.apache.cordova.bug;
+package org.apache.cordova.richpush;
 
 import android.os.Handler;
 import android.util.Log;
@@ -8,7 +8,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class OSBugPlugin extends CordovaPlugin {
+public class OSRichPush extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
