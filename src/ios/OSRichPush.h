@@ -1,7 +1,7 @@
 #import <Cordova/CDVPlugin.h>
 #import <Foundation/Foundation.h>
 
-@interface OSRichPushPlugin : CDVPlugin
+@interface OSRichPush : CDVPlugin
 
 - (void)throwError:(CDVInvokedUrlCommand *)command;
 
