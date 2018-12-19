@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin 
     xmlns="http://apache.org/cordova/ns/plugins/1.0" 
-    xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-bug" version="0.0.1">
+    xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-richpush" version="0.0.1">
     
     <name>Bug</name>
-    <description>Cordova Bug Plugin</description>
+    <description>Cordova Rich Push Plugin</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,outsystems,bug,plugin</keywords>
+    <keywords>cordova,outsystems,plugin</keywords>
     <repo></repo>
     <issue></issue>
 
     <!-- js -->
-    <js-module name="OSBug" src="www/OSBug.js">
-        <clobbers target="OSBug" />
+    <js-module name="OSRichPush" src="www/OSBug.js">
+        <clobbers target="OSRichPush" />
     </js-module>
     
     <!-- ios -->
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
-            <feature name="OSBugPlugin">
-                <param name="ios-package" value="OSBugPlugin" />
+            <feature name="OSRichPush">
+                <param name="ios-package" value="OSRichPush" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
 
-        <header-file src="src/ios/OSBugPlugin.h"/>
-        <source-file src="src/ios/OSBugPlugin.m" />
+        <header-file src="src/ios/OSRichPush.h"/>
+        <source-file src="src/ios/OSRichPush.m" />
     </platform>
 
     <!-- android -->
     <platform name="android">
         <config-file parent="/*" target="config.xml">
             <feature name="OSBugPlugin">
-                <param name="android-package" value="org.apache.cordova.bug.OSBugPlugin"/>
+                <param name="android-package" value="org.apache.cordova.richpush.OSRichPush"/>
                 <param name="onload" value="true" />
             </feature>
         </config-file>
 
-        <source-file src="src/android/OSBugPlugin.java" target-dir="src/org/apache/cordova/bug" />
+        <source-file src="src/android/OSRichPush.java" target-dir="src/org/apache/cordova/bug" />
     </platform>
 </plugin>
