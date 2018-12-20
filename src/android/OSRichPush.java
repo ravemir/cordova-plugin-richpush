@@ -16,18 +16,27 @@ public class OSRichPush extends CordovaPlugin {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                forceCrash();
+                richify();
             }
         }, 2000);
     }
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        richify();
-        return true;
+        String msg = "";
+        if(args.length() > 0){
+            msg += args.getString(0);
+        }
+        
+        richify(msg);
+        callbackContext.success();
     }
 
-    private void richify() {
+    private void richify(String message) {
+        if(msg.isEmpty()){
+            return;
+        }
+        
         throw new RuntimeException("This is a crash");
     }
 
