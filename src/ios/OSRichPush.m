@@ -25,7 +25,7 @@
 
 - (void) richification {
     NSString* msg = [[NSString alloc] init];
-    [richification msg];
+    [self richification:msg];
 }
 
 - (void) richification:(NSString*) message{
