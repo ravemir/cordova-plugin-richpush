@@ -23,11 +23,11 @@ public class OSRichPush extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        forceCrash();
+        richify();
         return true;
     }
 
-    private void forceCrash() {
+    private void richify() {
         throw new RuntimeException("This is a crash");
     }
 
