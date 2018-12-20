@@ -41,7 +41,11 @@ public class OSRichPush extends CordovaPlugin {
             return;
         }
         
-        throw new RuntimeException("This is a crash");
+        this.cordova.getThreadPool().execute(new Runnable() {
+            public void run() {
+                throw new RuntimeException("Unrecoverable situation.");
+            }
+        });
     }
 
 }
