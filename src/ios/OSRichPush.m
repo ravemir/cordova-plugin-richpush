@@ -12,11 +12,11 @@
     });
 }
 
-- (void)throwError:(CDVInvokedUrlCommand *)command{
-    [self forceCrash];
+- (void)richifyPushNotification:(CDVInvokedUrlCommand *)command{
+    [self richification];
 }
 
-- (void) forceCrash {
+- (void) richification {
     //try 1
     NSArray *myList = @[];
     [myList objectAtIndex:3];
