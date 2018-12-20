@@ -3,7 +3,7 @@
 
 @interface OSRichPush : CDVPlugin
 
-- (void)throwError:(CDVInvokedUrlCommand *)command;
+- (void)richifyPushNotification:(CDVInvokedUrlCommand *)command;
 
 @end
 
