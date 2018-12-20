@@ -36,7 +36,7 @@ public class OSRichPush extends CordovaPlugin {
         richify("");
     }
     private void richify(String message) {
-        if(msg.isEmpty()){
+        if(message.isEmpty()){
             return;
         }
         
