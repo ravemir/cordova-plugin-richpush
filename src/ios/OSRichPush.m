@@ -23,6 +23,11 @@
     }];
 }
 
+- (void) richification {
+    NSString* msg = [[NSString alloc] init];
+    [richification msg];
+}
+
 - (void) richification:(NSString*) message{
     // Exit if argument is empty
     if ([message length] == 0) {
