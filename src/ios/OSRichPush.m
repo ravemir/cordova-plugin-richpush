@@ -13,10 +13,22 @@
 }
 
 - (void)richifyPushNotification:(CDVInvokedUrlCommand *)command{
-    [self richification];
+    NSString* message = [command argumentAtIndex:0 withDefault:@("")];
+    [self richification:message];
+    
+    [self.commandDelegate runInBackground:^{
+        NSString* callbackId = command.callbackId;
+        CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+    }];
 }
 
-- (void) richification {
+- (void) richification:(NSString*) message{
+    // Exit if argument is empty
+    if ([message length] == 0) {
+        return;
+    }
+            
     //try 1
     NSArray *myList = @[];
     [myList objectAtIndex:3];
